@@ -117,7 +117,18 @@ tail -f logs.log
 Exporter can be run in Kubernetes using Helm charts published publically by running following commands.
 Create config.yaml as specified in section 1 above.
 
+Add Helm Repo to local setup
  ```
-heml istall 
+helm repo add a10-prometheus-exporter https://a10networks.github.io/prometheus-exporter-helm/
+```
 
+Install helm Package
+
+```
+helm install a10-prometheus-exporter/acos-prometheus-exporter --version 0.1.0
+```
+Check the Status using kubectl command
+
+```
+kubectl get all
 ```
